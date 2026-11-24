@@ -21,6 +21,7 @@
   "workspace": "clone",
   "current": { "unit": 13, "mission": "W13-2" },
   "weak": ["미디어쿼리 표기"],
+  "reviews": [{ "date": "2026-11-25", "topics": ["gap", "미디어쿼리 표기"], "score": "3/5" }],
   "deploys": [{ "unit": 47, "tool": "GitHub Pages", "url": "https://아이디.github.io/travel-note/" }],
   "units": [
     {
@@ -34,6 +35,7 @@
           "area": "여행지 목록",
           "criteria": ["640px 이상 2열, 1024px 이상 3열", "@media (width >= 640px) 모양", "간격은 gap"],
           "status": "doing",
+          "done_at": null,
           "hints": 1,
           "attempts": 2,
           "answer_seen": false,
@@ -50,6 +52,8 @@
 - `learned`: 그 회차의 배우기(미니 수업)를 끝냈는지
 - `weak`: 평가에서 보완이 나온 개념(상태에서 복습 추천에 씀)
 - `deploys`: 배포한 주소 기록
+- `reviews`: 복습 기록(날짜·주제·점수)
+- `done_at`: 미션을 끝낸 날(복습할 회차 고를 때 씀)
 - `range.from`·`to`: curriculum.md 의 회차 번호
 - 진행률 = 모든 `units[].missions[]` 중 `done` 수 ÷ 전체 미션 수
 - 개인정보(이름·연락처), 비밀 키는 넣지 않는다.
