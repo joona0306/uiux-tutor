@@ -136,12 +136,44 @@ claude plugin install uiux-tutor@uiux-tutor-market
 
 ---
 
-## 7. 업데이트 · 끄기 · 삭제
+## 7. 업데이트 — 새 버전 받기
+
+튜터가 좋아지면 이 저장소에 새 버전이 올라와요. 받는 방법은 둘 중 하나예요. **다시 설치할 필요는 없어요.**
+
+### 방법 ① 자동으로 받기 (권장 — 처음에 한 번만 켜 두기)
+1. Claude Code에서 `/plugin` 을 입력해요.
+2. **Marketplaces** 탭 → `uiux-tutor-market` 을 골라 **자동 업데이트(auto-update)** 를 켜요.
+3. 이제 Claude Code를 켤 때 새 버전을 알아서 받아요. "`/reload-plugins` 를 실행하라"는 안내가 뜨면 그대로 입력하세요(또는 Claude Code를 다시 열기).
+
+> Anthropic 공식 가게는 자동 업데이트가 기본으로 켜져 있지만, 이 가게처럼 개인이 만든 가게는 **기본으로 꺼져 있어요.** 그래서 한 번 켜 줘야 해요.
+
+### 방법 ② 직접 받기
+터미널에서:
+
+```bash
+claude plugin update uiux-tutor@uiux-tutor-market
+```
+
+그다음 Claude Code를 다시 열거나, 열려 있는 창에서 `/reload-plugins` 를 입력해요.
+
+"이미 최신(already at the latest version)"이라는데 새 버전이 있을 것 같으면, 가게 목록을 먼저 새로 고친 뒤 위 명령을 다시 실행하세요.
+
+```bash
+claude plugin marketplace update uiux-tutor-market
+```
+
+### 지금 내 버전 확인
+```bash
+claude plugin list
+```
+`uiux-tutor` 아래 `Version` 이 아래 "바뀐 내용"의 맨 위 버전과 같으면 최신이에요.
+
+> 업데이트해도 공부 폴더의 진도(`.tutor/progress.json`)는 그대로예요.
+
+## 8. 끄기 · 삭제
 
 | 하고 싶은 것 | 명령 |
 |---|---|
-| 새 버전 받기 | `claude plugin update uiux-tutor@uiux-tutor-market` |
-| 자동으로 받기 | Claude Code에서 `/plugin` → **Marketplaces** 탭 → `uiux-tutor-market` 자동 업데이트 켜기 |
 | 잠깐 끄기 / 다시 켜기 | `claude plugin disable uiux-tutor` / `claude plugin enable uiux-tutor` |
 | 삭제 | `claude plugin uninstall uiux-tutor` 그다음 `claude plugin marketplace remove uiux-tutor-market` |
 
@@ -150,7 +182,7 @@ claude plugin install uiux-tutor@uiux-tutor-market
 
 ---
 
-## 8. 자주 묻는 질문
+## 9. 자주 묻는 질문
 
 **Q. 튜터가 사이트를 못 열어요 / "서비스 지연" 같은 화면만 나와요.**
 Chrome 연동이 꺼져 있을 가능성이 커요. `claude --chrome` 으로 시작했는지, `/chrome` 에서 연동이 켜져 있는지 확인하세요. 그래도 안 되면 사이트 화면 캡처를 붙여 주면 튜터가 캡처로 분석해요.
@@ -169,7 +201,7 @@ Claude Code가 유료 플랜(Pro 이상)에서만 동작해서 이 튜터도 유
 
 ---
 
-## 9. 규칙 — 저작권과 개인정보
+## 10. 규칙 — 저작권과 개인정보
 
 - 원본 사이트에서는 **구조와 배치만** 배워요. 사진·글·로고는 가져오지 않고, 자리 표시 사진과 직접 쓴 글로 채워요.
 - 사이트·저장소 이름은 가상의 이름으로, 배포할 때는 "교육용 클론" 표시를 해요.
@@ -177,9 +209,17 @@ Claude Code가 유료 플랜(Pro 이상)에서만 동작해서 이 튜터도 유
 
 ---
 
-## 10. 의견 · 개선 요청
+## 11. 의견 · 개선 요청
 
 쓰다가 이상하거나 더 좋아질 곳이 있으면 이 저장소의 **Issues** 에 남겨 주세요. 튜터 화면을 그대로 복사해 붙여 주면 가장 빨리 고칠 수 있어요.
+
+## 12. 바뀐 내용
+
+| 버전 | 날짜 | 바뀐 것 |
+|---|---|---|
+| 0.3.0 | 2026-11-24 | 79개 회차 모두 미션 3개·배우기 재료·힌트 완성, 평가 때 완료 기준을 빠짐없이 판정 |
+| 0.2.0 | 2026-11-24 | Chrome으로 사이트 직접 확인, 회차마다 배우기 단계, 배포 단계(GitHub Pages·Vercel), 기준 버전 |
+| 0.1.0 | 2026-11-24 | 첫 버전 |
 
 <details>
 <summary>만든 사람을 위한 구조 설명</summary>
