@@ -16,6 +16,7 @@
       { "area": "여행지 목록", "layout": "카드 격자", "moving": "" }
     ]
   },
+  "diagnosis": "flex·sticky·grid 사용, @media 없음 → W14 제안",
   "range": { "from": 12, "to": 21 },
   "workspace": "clone",
   "current": { "unit": 13, "mission": "W13-2" },
