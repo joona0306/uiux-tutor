@@ -41,7 +41,7 @@
 미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
 - JS40-1: 해당 없음 (데이터 파일)
 - JS40-2: 해당 없음 (콘솔 결과)
-- JS40-3: 카드 요소 순서와 한 줄 카드 수가 원본과 같음
+- JS40-3: 카드 요소 순서·한 줄 카드 수가 원본과 같음, 불러오는 중·실패 문구 자리가 원본과 같은 종류 (원본에 없으면 그 부분 빼기)
 
 ## 힌트 재료
 - 1단계: MDN `fetch` 사용하기 — https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch , 모듈 — https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules

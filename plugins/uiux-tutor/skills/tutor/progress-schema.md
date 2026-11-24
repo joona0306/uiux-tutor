@@ -11,6 +11,22 @@
     "url": "https://example.com",
     "name": "가상 이름: 여행 노트",
     "checked_with": "playwright",
+    "terms": "이용약관 확인: 자동 수집 금지 조항 없음 (2026-11-25)",
+    "pages": [
+      { "name": "축제 목록", "url": "/list?type=festival", "areas": ["거르기", "카드 격자", "페이지 번호"] },
+      { "name": "상세", "url": "/detail?id=…", "areas": ["큰 사진", "제목·기간", "지도", "찜 버튼"] }
+    ],
+    "flows": [
+      {
+        "name": "축제 찾기",
+        "steps": [
+          { "screen": "홈", "action": "축제 카드 누르기", "url": "/", "states": [] },
+          { "screen": "상세", "action": "찜 버튼", "url": "/detail?id=…", "states": ["찜 켜짐"], "login": true }
+        ],
+        "status": "덜 됨",
+        "gaps": ["상세 주소에 id 없음"]
+      }
+    ],
     "map": [
       { "area": "머리글", "layout": "가로 flex", "moving": "모바일 메뉴", "status": "완성", "gaps": [] },
       { "area": "여행지 목록", "layout": "카드 격자(1280px 4장)", "moving": "", "status": "덜 됨", "gaps": ["1280px 3장(원본 4장)", "제목 줄에 '더보기' 없음"] }
@@ -35,6 +51,7 @@
           "area": "여행지 목록",
           "criteria": ["640px 이상 2열, 1024px 이상 3열", "@media (width >= 640px) 모양", "간격은 gap"],
           "status": "doing",
+          "optional": false,
           "done_at": null,
           "hints": 1,
           "attempts": 2,
@@ -51,6 +68,10 @@
 - `criteria`: 미션을 줄 때 보여 준 완료 기준 그대로(평가 때 빠짐없이 판정). 마지막 줄은 보통 "원본 닮음: …(원본 값)"
 - `site.map[].status`: `완성` | `덜 됨` | `안 함` — 원본과 같은 폭으로 나란히 보고 정한 구역 완성 상태. `gaps` 는 원본과 다른 점
 - 구역 완성 = `status` 가 `완성` 인 구역 수 ÷ 전체 구역 수 (진행률과 따로 보여 줌)
+- `site.pages`: 로그인 없이 본 대표 화면 목록. `site.flows`: 핵심 유저플로우 2~3개(단계마다 화면·누르는 곳·주소·상태, 로그인이 필요한 단계는 `login: true`). `status`·`gaps` 는 구역과 같은 뜻. 흐름 완성 = `완성` 인 흐름 수 ÷ 전체 흐름 수
+- `site.terms`: 이용약관 확인 결과 한 줄
+- `optional`: `true` 면 마무리 미션·선택 미션 — 진행률 계산에서 뺀다
+- 로그인한 화면에서 본 개인정보는 어디에도 적지 않는다(구조만)
 - `learned`: 그 회차의 배우기(미니 수업)를 끝냈는지
 - `weak`: 평가에서 보완이 나온 개념(상태에서 복습 추천에 씀)
 - `deploys`: 배포한 주소 기록
