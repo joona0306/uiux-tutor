@@ -34,6 +34,12 @@
 | N70-2 개념 적용 | `interface ButtonProps extends ComponentProps<'button'>` 로 `disabled`·`onClick` 을 받게 하고, 카드 컴포넌트에 Text·Boolean 속성도 옮겨요 | `{...rest}` 로 진짜 `<button>` 에 전달 / `disabled` 일 때 `disabled:opacity-40` 이 적용되고 클릭이 안 됨 / Boolean 속성은 `&&` 또는 `? :` 로 보이고 숨김(0 같은 숫자를 `&&` 왼쪽에 두지 않음) |
 | N70-3 응용 | F06 의 `list-mobile`·`list-desktop` 프레임을 코드 하나로 옮겨요(모바일 먼저) | 기본 클래스는 모바일, `sm:`·`md:`·`lg:` 로 열 수를 늘림(1 → 2 → 3열) / 브라우저 폭 375·768·1024 에서 Figma 프레임과 열 수가 같음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- N70-1: 버튼 모양이 원본 버튼과 같음
+- N70-2: 해당 없음 (props 타입)
+- N70-3: 목록 화면의 모바일·데스크톱 배치가 원본과 같음
+
 ## 힌트 재료
 - 1단계: Tailwind 공식 문서 "반응형 디자인" — https://tailwindcss.com/docs/responsive-design
 - 2단계: Figma 컴포넌트 세트의 오른쪽 사이드바에서 속성 이름과 값 목록을 그대로 읽어 prop·타입으로 옮겨요. 접두사 없는 클래스가 모바일 기본, `sm:` 은 640px 이상, `md:` 는 768px 이상, `lg:` 는 1024px 이상이에요.

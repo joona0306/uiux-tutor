@@ -29,6 +29,12 @@
 | R19A-2 개념 적용 | 새 Vite 프로젝트를 보지 않고 만들어요: Router·Tailwind 설치, 고른 사이트의 [카드 목록] → 상세 → 404, Tailwind 반응형 grid, CSS Module 로 만든 조건부 class 배지 하나(가상 데이터) | 설치 순서를 막힘 없이 끝냄(막힌 곳은 기록) / 주소 3개(`/`, `/items/1`, `/hello`)가 각각 목록·상세·404 / `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3` / 배지에 `styles.이름` 두 개를 조건부로 조합 |
 | R19A-3 응용 | 값을 어디에 둘지 표로 정하고, 위 Zustand 코드를 읽고 Context 와 다른 점을 적어요 | 값 5개 이상(모달 열림·담은 개수·입력 중인 글·불러온 목록·현재 주소 값)마다 `useState`/props/Context 중 하나와 한 줄 이유 / Context 와 Zustand 의 차이 2가지(Provider 감싸기, 설치 여부 등) / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- R19A-1: 해당 없음 (손으로 예상)
+- R19A-2: 목록·상세 화면 배치가 원본과 같음
+- R19A-3: 해당 없음 (상태 위치 정하기)
+
 ## 힌트 재료
 - 1단계: React 공식 문서 "Context 로 데이터 깊숙이 전달하기" — https://ko.react.dev/learn/passing-data-deeply-with-context
 - 정답 확인용(튜터용 — **R19A-1 을 제출한 뒤에만** 보여 줘요): ① `/items/3` → 상세, `/items` → 404(번호가 없어서) ② 숫자와 `string | undefined` 를 비교해 `TS2367` ③ 쓴 순서로는 알 수 없어요(Tailwind 가 만든 CSS 에서 나중에 나오는 쪽이 이김) → 충돌하는 class 는 둘 중 하나만 붙여요 ④ 안전하지 않음(완성된 이름이 소스에 없어서 CSS 가 안 만들어짐) ⑤ 1개(띄어쓰기 없이 두 이름이 한 덩어리로 붙어서 CSS 에 없는 class 가 됨)

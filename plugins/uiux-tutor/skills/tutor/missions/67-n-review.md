@@ -23,6 +23,12 @@
 | N67-2 개념 적용 | 상세 사진(`Image`, `width`·`height`)과 탭 제목(`generateMetadata`)을 넣고 `generateStaticParams` 로 상세를 미리 만들어요 | `Image` 에 `width`·`height` 있음 / 상세마다 탭 제목이 다름 / `npm run build` 표에서 상세 주소가 `●` |
 | N67-3 응용 | 값마다 둘 곳을 정해요(목록 데이터, 고른 태그, 열고 닫는 메뉴, 찜 목록). 정한 이유를 README 에 표로 써요 | 표에 값 4개와 "서버 / 주소 / `useState` / Context" 중 하나씩 있음 / 클라이언트 컴포넌트는 `'use client'` 가 필요한 파일에만 있음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- N67-1: 목록·상세 화면 구성이 원본과 같음
+- N67-2: 해당 없음 (사진·메타데이터)
+- N67-3: 해당 없음 (상태 위치 정하기)
+
 ## 힌트 재료
 - 1단계: Next.js 공식 문서 "generateStaticParams" — https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 - 2단계: 폴더 이름의 `[slug]` 와 `params` 에서 꺼내는 이름을 맞춰요. 빌드 표의 `ƒ` 는 오류가 아니라 "요청마다 만든다"는 표시예요. 값 고르기: 읽기만 → 서버 / 공유하는 필터 → 주소 / 한 화면 → `useState` / 여러 곳이 같이 → Context.

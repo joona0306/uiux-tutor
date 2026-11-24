@@ -26,6 +26,12 @@
 | JS05-2 개념 적용 | 카드 목록 구역을 **배열 데이터**로 그려요(카드 6개, 내가 만든 가상 데이터) | 객체 배열(이름·지역·사진 경로) / `createElement` → 내용 채우기 → `append` / 사용자에게 보일 글자는 `textContent` (innerHTML 아님) |
 | JS05-3 응용 | 카드 하나를 누른 것처럼 강조하는 클래스를 붙였다 뗐다 해요(버튼 하나로) | `classList.toggle` 사용 / CSS에 강조 클래스 정의 / `querySelectorAll` 과 `querySelector` 차이를 말할 수 있음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- JS05-1: 바꾼 글이 원본의 같은 자리(그 제목·안내 글 자리)에 있음
+- JS05-2: 그린 카드의 요소 순서와 한 줄 카드 수가 원본과 같음
+- JS05-3: 해당 없음 (강조 연습)
+
 ## 힌트 재료
 - 1단계: MDN `Document.querySelector()` — https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector
 - 2단계: 찾기(querySelector) → 만들기(createElement) → 채우기(textContent) → 넣기(append)

@@ -28,6 +28,12 @@
 | P06-2 개념 적용 | 이슈마다 브랜치를 따서 작업하고 PR 로 `main` 에 합쳐요(혼자라서 내가 리뷰 댓글을 남겨요) | 브랜치 이름이 `feat/…`·`fix/…` 모양 / 머지된 PR 2개 이상(`gh pr list --state merged` 또는 GitHub Pull requests 의 Merged 탭에서 확인) / PR 본문에 `Closes #번호` / 내가 남긴 리뷰 댓글 1개 이상 / 커밋 메시지가 `type: 무엇을` |
 | P06-3 응용 | 같은 줄을 두 브랜치에서 일부러 고쳐 충돌을 한 번 풀고, 배포해서 Preview 와 Production 주소를 비교해요 | 충돌 표시가 파일에 남지 않음(`git grep "<<<<<<<"` 결과 없음) / 충돌을 어떻게 풀었는지 PR 댓글 한 줄 / Preview 주소와 Production 주소가 각각 열림 / deploy.md 점검표 통과 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- P06-1: 해당 없음 (이슈)
+- P06-2: 두 구역 배치가 원본과 같음
+- P06-3: 해당 없음 (충돌·배포)
+
 ## 힌트 재료
 - 1단계: GitHub Docs 병합 충돌 — https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts
 - 2단계: 충돌 난 파일을 열면 `<<<<<<<` 아래가 내 쪽, `>>>>>>>` 위가 합치려는 쪽이에요. 남길 내용만 쓰고 표시 세 줄을 지운 뒤 `git add` → `git commit`. PR 본문에 `Closes #1` 이라고 쓰면 머지될 때 이슈가 닫혀요.

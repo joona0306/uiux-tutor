@@ -26,6 +26,12 @@
 | W21-2 종합 문제 ② 말로 답하기·자기 점검 | 말로 답해요: 7) 고른 사이트의 "예약하기" 같은 동작은 `<a>` 와 `<button>` 중 무엇으로 만들까요? 8) 분위기만 주는 장식 사진의 `alt` 는? 9) `transition` 은 평소 규칙과 `:hover` 중 어디에 쓸까요? 그리고 자기 점검표(HTML 뼈대·시맨틱·alt·label·우선순위·박스·flex·grid·absolute·미디어쿼리·clamp·transition·변수·DevTools)를 "예/아직"으로 표시해요 | 7~9번에 이유가 있는 답 / 점검표 14항목에 모두 예/아직 표시 / "아직" 항목마다 다시 볼 회차(W번호)와 보충 계획 한 줄 |
 | W21-3 종합 문제 ③ 작은 실습 | 고른 사이트의 카드 3개 구역(예: 이번 달 추천 3가지)을 새 폴더 `w21-practice` 에 만들어요: 시맨틱 마크업, 모바일 1열 grid, 카드 안 세로 flex 와 맨 아래 알약 버튼, 768px 이상 3열, hover 떠오르기·포커스 표시·움직임 줄이기 | `main > section > h1 + ul > li > article` 구조 / 375px 에서 1열·가로 스크롤 없음, 768px 이상 3열 / 세 카드의 버튼이 같은 높이(카드 맨 아래)에 있음 / Tab 으로 버튼에 가면 포커스 표시, `prefers-reduced-motion` 블록이 있음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- W21-1: 해당 없음 (손으로 예상)
+- W21-2: 해당 없음 (말로 답하기)
+- W21-3: 1280px 한 줄 카드 수와 카드 안 요소 순서가 원본과 같음
+
 ## 힌트 재료
 - 1단계(점검 회차는 여기까지만): MDN 문서 — [박스 모델](https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Styling_basics/Box_model) · [명시도](https://developer.mozilla.org/ko/docs/Web/CSS/Specificity) · [CSS 그리드 기본 개념](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - 정답 확인용(튜터용 — **미션을 제출한 뒤에만** 보여 줘요): 1) 기본 324px, border-box 300px 2) 153.33px((500−40)÷3) 3) 200px((410−10)÷2), 5번째는 3번째 줄 첫 칸 4) 700px 1열, 800px 3열 5) green(아이디 `#x p` 가 가장 셈) 6) 400px 은 20px(4vw 가 16px 이라 최소값), 700px 은 28px 7) `<button type="button">`(이동이 아니라 동작) 8) `alt=""` 9) 평소 규칙

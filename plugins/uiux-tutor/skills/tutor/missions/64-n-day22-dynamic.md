@@ -29,6 +29,12 @@
 | N22-2 개념 적용 | 없는 slug 는 404 로 보내고, 상세에 사진(`public/images/` 의 자리 표시 사진)과 탭 제목을 넣어요 | `find` 결과가 없으면 `notFound()` 호출 / `Image` 에 `width`·`height` 가 있고 `src` 는 `/images/…` / 상세마다 `generateMetadata` 로 탭 제목이 다름 |
 | N22-3 응용 | 목록에 태그 버튼을 만들고 `?tag=` 주소로 걸러요(`useState` 안 씀) | 버튼이 `Link` 로 `?tag=값` 주소로 감 / `await props.searchParams` 로 읽고 `typeof` 로 글자인지 좁힘 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- N22-1: 목록·상세 화면 구성이 원본과 같음
+- N22-2: 해당 없음 (404·사진·탭 제목)
+- N22-3: 태그 버튼 자리·모양이 원본과 같음
+
 ## 힌트 재료
 - 1단계: Next.js 공식 문서 "page 파일" (params·searchParams·PageProps) — https://nextjs.org/docs/app/api-reference/file-conventions/page
 - 2단계: 폴더 이름의 대괄호 안 이름(`slug`)과 `params` 에서 꺼내는 이름이 같아야 해요. `find` 는 못 찾으면 `undefined` 를 주니 `notFound()` 로 막은 뒤에 쓰면 타입이 좁혀져요. `searchParams` 값은 글자·글자 배열·`undefined` 중 하나라서 `typeof tag === 'string'` 으로 확인해요.

@@ -22,6 +22,12 @@
 | N69-2 개념 적용 | 고른 사이트의 카드 하나를 Figma Auto Layout 설정(방향·Gap·Padding·Hug/Fill/Fixed) 그대로 flex 로 옮겨요 | Figma 의 방향·Gap·Padding 이 `flex-col`/`flex-row`·`gap-*`·`p-*` 와 일치 / Fill 은 `flex-1`, Fixed 는 `w-*`(+가로 flex 안이면 `shrink-0`) / Hug 인 태그가 세로 flex 안에서 `self-start` 로 늘어나지 않음 |
 | N69-3 응용 | 카드의 색·간격·모서리를 토큰 클래스(`bg-primary`, `p-lg`, `rounded-md`)로만 쓰고, 하드코딩한 값이 없는지 점검해요. 카드는 Next.js 컴포넌트로 | 카드 파일에 `#` 색 코드·`px` 값이 직접 없음 / Dev Mode(또는 오른쪽 사이드바)에서 읽은 값과 화면 값이 같음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- N69-1: 토큰 값이 원본에서 읽은 값과 같음
+- N69-2: 카드 배치가 원본과 같음
+- N69-3: 해당 없음 (토큰 점검)
+
 ## 힌트 재료
 - 1단계: Tailwind 공식 문서 "테마 변수" — https://tailwindcss.com/docs/theme
 - 2단계: 변수 이름 앞부분이 클래스를 정해요: `--color-*` → `bg-*`·`text-*`, `--spacing-*` → `p-*`·`gap-*`·`w-*`, `--radius-*` → `rounded-*`. Figma 오른쪽 사이드바(또는 Dev Mode Inspect)에서 값과 변수 이름을 읽어요. 타입 오류가 나면 `파일:줄:칸 - error TS번호: 설명` 의 파일과 줄부터 열어요.

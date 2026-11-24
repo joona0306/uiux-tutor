@@ -23,6 +23,12 @@
 
 제출: Figma 파일 링크(보기 권한) 또는 세 프레임을 나란히 둔 캡처와 `Design System` 페이지 캡처.
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- F06-1: 세 프레임의 열 수·구역 순서가 원본 세 폭 화면과 같음
+- F06-2: 해당 없음 (규칙 문서)
+- F06-3: 해당 없음 (버튼 높이 점검)
+
 ## 힌트 재료
 - 1단계: Figma 도움말 "Guide to auto layout" 의 Grid 방향·Min/Max 크기 — https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout , 브레이크포인트는 MDN "미디어 쿼리 사용하기" — https://developer.mozilla.org/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
 - 2단계: 모바일(375)을 먼저 만들고 `Ctrl + D` 로 복제해 폭과 열 수만 바꿔요. 카드는 모두 선택해 W 를 Fill container 로. 버튼은 인스턴스가 아니라 **메인 컴포넌트**에서 Add min height 44 를 줘요. 숫자를 직접 읽을 때는 오른쪽 사이드바의 H 칸을 봐요.

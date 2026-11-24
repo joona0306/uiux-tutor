@@ -36,6 +36,12 @@
 | R17-2 개념 적용 | 카드를 누르면 `/items/:id` 상세 페이지로 가요. 없는 번호와 없는 주소도 처리해요 | `useParams<'id'>()` 와 `Number(id)` / `if (!item)` 으로 "없어요" 안내(`/items/999`) / `path="*"` 404 페이지(`/hello`) / 카드의 하트 버튼은 `Link` 밖에 있어 눌러도 이동 안 함 |
 | R17-3 응용 | 담은(찜한) 개수를 Context 로 만들어 머리글·목록·상세에서 같은 숫자를 보여 줘요 | `CartContext` 가 `createContext<... \| null>(null)` / `useCart` 에서 `null` 이면 `throw` / `main.tsx` 에서 `CartProvider` 로 감쌈 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- R17-1: 머리글 메뉴 구성(항목 순서)이 원본과 같음
+- R17-2: 상세 화면 구성(사진·제목·설명 순서)이 원본 상세와 같음
+- R17-3: 해당 없음 (Context 연습)
+
 ## 힌트 재료
 - 1단계: React Router 공식 문서 "Routing" — https://reactrouter.com/start/declarative/routing
   (참고) React 공식 문서 "Context 로 데이터 깊숙이 전달하기" — https://ko.react.dev/learn/passing-data-deeply-with-context (React Router 는 `Routes`·`Route`·`Link`·`NavLink`·`Outlet`·`useParams` 이름으로 강의 Day 17 에서 찾아요)

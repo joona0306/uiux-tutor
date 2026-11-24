@@ -13,6 +13,9 @@ if ($dir -and (Test-Path $p)) {
   $tot = $all.Count
   $done = @($all | Where-Object { $_.status -eq 'done' }).Count
   if ($tot -gt 0) { $parts += ('📚 진행률 {0}% ({1}/{2})' -f [math]::Round($done * 100 / $tot), $done, $tot) }
+  $areas = @($g.site.map)
+  $ok = @($areas | Where-Object { $_.status -eq '완성' }).Count
+  if ($areas.Count -gt 0) { $parts += ('구역 완성 {0}/{1}' -f $ok, $areas.Count) }
 }
 $c = $d.context_window.used_percentage
 if ($null -ne $c) { $parts += ('대화 {0}%' -f [math]::Round([double]$c)) }

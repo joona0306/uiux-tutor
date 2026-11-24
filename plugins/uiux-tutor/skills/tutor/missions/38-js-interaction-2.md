@@ -30,6 +30,12 @@
 | JS38-2 개념 적용 | 슬라이드에 자동 넘김을 더해요. 기본은 꺼 두고 "자동 넘김 시작/멈춤" 버튼 하나로 켜고 끄고, 버튼 글자도 바꿔요 | 처음 열었을 때 저절로 넘어가지 않음 / `setInterval` 의 반환값을 `timerId` 에 받아 `clearInterval(timerId)` 로 멈춤 / 시작을 연달아 눌러도 속도가 빨라지지 않음(`timerId === null` 확인) / 기본을 꺼 둔 이유를 한 줄로 말함 |
 | JS38-3 응용 | 고른 사이트의 안내 구역(예: 사이즈표, 이용 안내)을 `<dialog>` 모달로 만들어요. 열기·닫기 버튼, 바깥 막 클릭 닫기를 붙이고 Day 06 의 클래스 모달과 무엇이 다른지 적어요 | `showModal()` 로 열고 `close()` 로 닫음(HTML 에 `open` 속성이 없음) / Esc 로 닫히고 뒤 페이지가 눌리지 않음 / 바깥 클릭 닫기는 `event.target === dialog`, 안쪽 클릭은 안 닫힘 / 차이를 "Esc·뒤 막기·포커스를 브라우저가 해 준다" 로 설명함 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- JS38-1: 한 화면에 보이는 슬라이드 수와 이전·다음 버튼 자리가 원본과 같음
+- JS38-2: 멈춤 버튼 자리가 원본과 같음 (원본에 없으면 해당 없음)
+- JS38-3: 해당 없음 (모달 연습)
+
 ## 힌트 재료
 - 1단계: MDN `dialog` 요소 — https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/dialog , `setInterval` — https://developer.mozilla.org/ko/docs/Web/API/Window/setInterval
 - 2단계: 상태는 `currentIndex` 와 `timerId`(처음 `null`) 두 개. `showSlide` 는 번호만 받아 화면을 바꾸고, 버튼·키보드·타이머가 모두 이 함수를 불러요. 모달 안쪽 여백은 `<dialog>` 가 아니라 안쪽 상자에 줘야 바깥 클릭 판정이 맞아요.

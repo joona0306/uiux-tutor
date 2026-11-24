@@ -23,6 +23,12 @@
 | PJ2-2 구현·점검 | 시안을 Next.js + Tailwind 로 구현하고(메뉴·슬라이드·모달 중 2개 이상), 품질 점검표를 채워요 | 페이지 4개 이상이 열림 / 인터랙션 2개 이상이 키보드(`Tab`·`Enter`·`Esc`)로 동작 / 320·768·1280px 가로 넘침 `false` / `npm run build`·`npm run lint` 통과 / `docs/quality-check.md` 에 Lighthouse 접근성 점수·W3C Error 개수 / `fix:`·`feat:` 커밋 기록 |
 | PJ2-3 배포·운영 데이터 | 배포하고 GA4 이벤트 2개 이상을 심어 실제 데이터로 개선안 1~2개를 써요 | 배포 주소가 열리고 deploy.md 점검표 통과(비밀 키·`.env` 없음 포함) / 개인정보 처리방침 링크가 있음 / 실시간 보고서에서 이벤트 이름 2개가 보이는 캡처 / `docs/ga4-plan.md` 에 "숫자 + 관찰 → 개선안 → 다시 확인할 이벤트" / README 에 배포 주소·Figma 링크·점검 결과 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- PJ2-1: 해당 없음 (내 기획)
+- PJ2-2: 원본 대신 **내 시안**과 같음 (화면마다 시안과 나란히 비교)
+- PJ2-3: 해당 없음 (배포·데이터)
+
 ## 힌트 재료
 - 1단계: MDN 반응형 디자인 — https://developer.mozilla.org/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design , Next.js 배포 — https://nextjs.org/docs/app/getting-started/deploying
 - 2단계: 주제는 범위부터 줄여요(페이지 4~6개). 공통 컴포넌트·데이터·주소를 먼저 만들고, 필수 기능 → 인터랙션 → 점검 순서로 가요. 품질 점검은 마지막 날이 아니라 구현 중간에 한 번 돌려요. GA4 는 개선안을 쓰려면 며칠 데이터가 필요하니 일찍 배포해요.

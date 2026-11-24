@@ -12,8 +12,8 @@
     "name": "가상 이름: 여행 노트",
     "checked_with": "playwright",
     "map": [
-      { "area": "머리글", "layout": "가로 flex", "moving": "모바일 메뉴" },
-      { "area": "여행지 목록", "layout": "카드 격자", "moving": "" }
+      { "area": "머리글", "layout": "가로 flex", "moving": "모바일 메뉴", "status": "완성", "gaps": [] },
+      { "area": "여행지 목록", "layout": "카드 격자(1280px 4장)", "moving": "", "status": "덜 됨", "gaps": ["1280px 3장(원본 4장)", "제목 줄에 '더보기' 없음"] }
     ]
   },
   "diagnosis": "flex·sticky·grid 사용, @media 없음 → W14 제안",
@@ -48,7 +48,9 @@
 ```
 
 - `status`: `todo` | `doing` | `done`
-- `criteria`: 미션을 줄 때 보여 준 완료 기준 그대로(평가 때 빠짐없이 판정)
+- `criteria`: 미션을 줄 때 보여 준 완료 기준 그대로(평가 때 빠짐없이 판정). 마지막 줄은 보통 "원본 닮음: …(원본 값)"
+- `site.map[].status`: `완성` | `덜 됨` | `안 함` — 원본과 같은 폭으로 나란히 보고 정한 구역 완성 상태. `gaps` 는 원본과 다른 점
+- 구역 완성 = `status` 가 `완성` 인 구역 수 ÷ 전체 구역 수 (진행률과 따로 보여 줌)
 - `learned`: 그 회차의 배우기(미니 수업)를 끝냈는지
 - `weak`: 평가에서 보완이 나온 개념(상태에서 복습 추천에 씀)
 - `deploys`: 배포한 주소 기록

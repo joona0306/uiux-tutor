@@ -30,6 +30,12 @@
 
 확인 방법: `git branch`, `git log --oneline --graph --all`, `git status` 의 결과와 GitHub 의 PR·이슈 화면(캡처 또는 주소)으로 확인해요.
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- G27-1: 해당 없음 (Git)
+- G27-2: 해당 없음 (Git)
+- G27-3: 해당 없음 (GitHub)
+
 ## 힌트 재료
 - 1단계: Git 문서 https://git-scm.com/docs/git-switch , https://git-scm.com/docs/git-merge · GitHub Docs "충돌 해결(명령줄)" — https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line · "PR 을 이슈에 연결" — https://docs.github.com/ko/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue
 - 2단계: ① `git switch -c feature/이름` 으로 갈래 만들고 고친 뒤 커밋 ② `git switch main` 으로 돌아와 같은 줄을 다르게 고쳐 커밋 ③ `main` 에서 `git merge feature/이름` → 충돌 파일을 열어 표시 세 줄을 지우며 원하는 문구만 남기기 → `git add` → `git commit` ④ PR 은 브랜치를 push 한 뒤 GitHub 저장소의 Compare & pull request 에서, 본문 끝에 `Closes #번호`

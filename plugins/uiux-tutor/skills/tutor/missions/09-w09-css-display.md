@@ -25,6 +25,12 @@
 | W09-2 개념 적용 | 고른 사이트의 목록 카드를 둥근 사진 카드로 꾸며요: 모서리, 그림자, 사진 꽉 채우기, 카테고리 칩(알약) | 카드에 `border-radius` · `overflow: hidden` · `box-shadow` / `<img>` 에 `display: block` · `height` · `object-fit: cover` / 칩은 `display: inline-block` 으로 `padding` 이 먹음 |
 | W09-3 응용 | 카드를 `inline-block` 으로 나란히 놓아 보고(`vertical-align: top`), 안내 문구 하나를 `display: none` 으로 숨겨요. `visibility: hidden` 과 어떻게 다른지 말해요 | 카드 4개가 한 줄에 나란히(창 폭에 따라 줄바꿈) 놓임 / 높이가 달라도 윗선이 맞음 / 숨긴 요소가 자리도 차지하지 않음(`display: none`) / `none` 과 `visibility: hidden` 의 차이를 한 문장으로 말함 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- W09-1: 배너 높이와 글자 위치가 원본 첫 화면 배너와 비슷함
+- W09-2: 카드 모서리 둥글기·그림자 유무·칩 모양이 원본 카드와 같음
+- W09-3: 1280px에서 한 줄에 놓인 카드 수가 원본과 같음
+
 ## 힌트 재료
 - 1단계: MDN `background-size` · `display` · `object-fit` 문서(위 링크)
 - 2단계: 배경 이미지를 올린 상자에는 높이가 있어야 사진이 보여요. 카드 모서리를 둥글게 하면 카드에 `overflow: hidden` 도 함께 줘요. 사진의 찌그러짐은 칸 크기를 정한 뒤 `object-fit` 으로 풀어요.

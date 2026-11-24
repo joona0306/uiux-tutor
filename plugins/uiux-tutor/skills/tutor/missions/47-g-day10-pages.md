@@ -25,6 +25,12 @@
 | G10-2 개념 적용 | GitHub Pages로 배포해요 | 저장소 Settings → Pages 에서 배포 설정 / 배포 주소가 열림 / 사진·CSS·JS 경로가 깨지지 않음(상대 경로) |
 | G10-3 응용 | 배포 전 점검표(deploy.md)를 채우고 README에 배포 주소를 적어요 | 화면에 "교육용 클론" 표시 / 원본 사진·글 없음 / README에 배포 주소·만든 것·원본과 다른 점 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- G10-1: 해당 없음 (GitHub)
+- G10-2: 해당 없음 (배포 — 배포 화면이 내 컴퓨터 화면과 같은지는 deploy.md 점검표로)
+- G10-3: 해당 없음 (점검표)
+
 ## 힌트 재료
 - 1단계: GitHub Docs "GitHub Pages 사이트 만들기" — https://docs.github.com/ko/pages/getting-started-with-github-pages/creating-a-github-pages-site
 - 2단계: 주소가 열리는데 그림이 안 보이면 경로를 의심해요. `/images/a.jpg`(맨 앞 `/`)는 저장소 이름이 빠진 주소로 가요 → `images/a.jpg`

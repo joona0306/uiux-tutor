@@ -20,6 +20,12 @@
 | P02-2 개념 적용 | Lighthouse(시크릿 창)를 돌려 접근성·권장사항·SEO 점수와 못 통과한 항목을 읽고, 대비·이미지 문제를 고쳐요 | 고치기 전·후 점수를 점검표에 숫자로 적음 / 못 통과한 항목 이름(영어 원문)과 고친 방법을 한 줄씩 적음 / 첫 화면 큰 사진에 `loading="eager"`·`fetchPriority="high"`, 폭이 바뀌는 사진에 `sizes` / 접근성 90 이상 |
 | P02-3 응용 | `npm run lint` 와 W3C HTML 검사기(배포 주소, deploy.md 점검 후)를 돌려 결과를 읽고 정리해요 | `npm run lint` 결과 error·warning 이 0개(`any`·안 쓰는 변수 포함) / W3C 결과의 Error 개수와 Info 를 구분해 점검표에 적음 / Error 는 0개 또는 남은 것의 이유를 적음 / 점검표가 커밋되어 저장소에 있음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- P02-1: 세 폭에서 구역별 원본 닮음 표(구역마다 같음/다름과 다른 점)를 씀
+- P02-2: 해당 없음 (Lighthouse)
+- P02-3: 해당 없음 (검사기)
+
 ## 힌트 재료
 - 1단계: web.dev 접근성 배우기 — https://web.dev/learn/accessibility , Next.js ESLint — https://nextjs.org/docs/app/api-reference/config/eslint
 - 2단계: 가로 넘침은 `true` 가 나온 뒤 요소를 하나씩 숨겨 보며(DevTools 에서 `display: none`) 범인을 찾아요. 대비는 Elements 의 색 칸에 나오는 대비 숫자(4.5)를 봐요. Lighthouse 항목은 펼치면 문제 요소가 나와요.

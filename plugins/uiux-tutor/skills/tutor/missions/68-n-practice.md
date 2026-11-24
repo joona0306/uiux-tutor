@@ -33,6 +33,12 @@
 | N68-2 개념 적용 | 머리글에 검색창(`Form`)을 넣고 `/search` 결과 페이지를 만들어요 | `Form` 의 `action="/search"` 와 입력의 `name` 이 있음 / 결과 페이지가 `await props.searchParams` 로 읽고 `typeof` 로 글자만 사용 / 검색어를 바꾸면 결과 목록이 달라짐 |
 | N68-3 응용 | 상세는 `generateStaticParams`(주소 값은 `String()`)로 미리 만들고, 검색 결과에 `loading.tsx` 를 붙여요 | `npm run build` 표에서 상세는 `●`, `/search` 는 `ƒ` / `loading.tsx` 가 `app/search/` 안에 있음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- N68-1: 상세 화면 구성이 원본 상세와 같음
+- N68-2: 검색창 자리가 원본 머리글과 같음
+- N68-3: 해당 없음 (미리 만들기·로딩)
+
 ## 힌트 재료
 - 1단계: Next.js 공식 문서 "Form" — https://nextjs.org/docs/app/api-reference/components/form
 - 2단계: 입력의 `name` 이 곧 주소의 `?` 뒤 이름이 돼요. 결과 페이지는 `app/search/page.tsx` 에 두고, 그 폴더에 `loading.tsx` 를 함께 둬요. `searchParams` 를 쓰는 페이지는 요청마다 만들어져서 빌드 표에서 `ƒ` 예요.

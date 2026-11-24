@@ -24,6 +24,12 @@
 
 제출: Figma 파일 링크(보기 권한) 또는 변수 창·`preview-light`/`preview-dark` 캡처.
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- F05-1: 색 변수 값이 원본 대표 색과 같음
+- F05-2: 변수를 연결한 Button·Card 모양이 원본과 같음
+- F05-3: 해당 없음 (다크 모드는 원본에 없을 수 있음)
+
 ## 힌트 재료
 - 1단계: Figma 도움말 "Guide to variables in Figma" — https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma (변수 종류·모드·코드 표기)
 - 2단계: 캔버스 빈 곳을 눌러 아무것도 선택하지 않은 상태에서 Variables 를 열어요. 이름은 `primary` 처럼 만들고 그룹 `color` 로 묶으면 `color/primary` 가 돼요. 연결은 Fill 의 점 4개 아이콘으로, Padding 칸에서는 `=` 키로 변수를 골라요. 모드는 변수 목록 위 New variable mode 로 더해요.

@@ -26,6 +26,12 @@
 | R19-2 개념 적용 | 머리글과 카드 배치를 `flex` 로, 카드와 버튼에 `hover:` 를 달고, 필터 버튼의 상태별 class 를 `Record<Variant, string>` 으로 묶어요 | `flex`, `gap-*`, `items-center` 또는 `justify-between` 사용 / `hover:` + `transition` 반응 / `type FilterVariant = 'selected' \| 'default'` 와 `Record<FilterVariant, string>`, 한 칸을 지우면 TS 오류가 남(확인 후 되돌림) |
 | R19-3 응용 | 카드 목록을 모바일 우선 반응형 grid 로 만들어요 | 375px 에서 1열 / 640px 이상 2열, 1024px 이상 3열(`sm:`, `lg:`) / 375px 에서 가로 스크롤 없음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- R19-1: 카드 수치(padding·gap·글자 크기·모서리·색)가 원본에서 읽은 값과 같음
+- R19-2: 머리글·카드 배치가 원본과 같음
+- R19-3: 세 폭에서 열 수가 원본과 같음
+
 ## 힌트 재료
 - 1단계: Tailwind 공식 문서 "Vite 로 설치하기" — https://tailwindcss.com/docs/installation/using-vite
 - 2단계: 인터넷의 옛 글(`tailwind.config.js`, `npx tailwindcss init`)은 이전 버전 방법이에요. 이 과정은 Tailwind 4 라서 플러그인과 CSS 한 줄만 써요. 모바일 class 를 먼저 쓰고, 넓은 화면에서 달라지는 것만 `sm:`·`lg:` 로 덮어써요.

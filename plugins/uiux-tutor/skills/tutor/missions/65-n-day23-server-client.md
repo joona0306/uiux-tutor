@@ -37,6 +37,12 @@
 | N23-2 개념 적용 | 카드의 찜(하트) 버튼과 분류 필터를 `'use client'` 컴포넌트로 만들고, 서버가 읽은 목록을 props 로 넘겨요 | `'use client'` 가 파일 맨 첫 줄(찜 버튼·필터 파일에만) / 받는 쪽에 `type …Props` 로 `Item[]`·`boolean` 타입을 적음 / 서버 → 클라이언트로 함수를 props 로 넘기지 않음 |
 | N23-3 응용 | 찜 목록을 여러 컴포넌트(카드·머리글 숫자)가 같이 보게 Context 로 만들어요. 공공 데이터 같은 외부 API 를 쓴다면 키는 `.env.local` 에 두고 서버 컴포넌트에서만 읽어요 | Provider 가 `'use client'` 이고 `layout.tsx` 에서는 `{children}` 만 감쌈 / API 키를 쓴다면 `.env.local` 에 있고 이름이 `NEXT_PUBLIC_` 으로 시작하지 않음 / `.env.local` 이 `.gitignore` 에 있고 `npm run build`·`npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- N23-1: 카드 목록 배치가 원본과 같음
+- N23-2: 해당 없음 (클라이언트 컴포넌트)
+- N23-3: 해당 없음 (Context 연습)
+
 ## 힌트 재료
 - 1단계: Next.js 공식 문서 "서버·클라이언트 컴포넌트" — https://nextjs.org/docs/app/getting-started/server-and-client-components
 - 2단계: `useState`·`onClick`·브라우저 기능이 필요한 곳만 `'use client'` 로 떼어 내요. 값은 이렇게 골라요: 한 번 읽어 보여 주기만 → 서버 / 주소로 공유할 검색어 → 주소 / 이 화면에서만 → `useState` / 여러 컴포넌트가 같이 → Context. 환경 변수는 서버 코드에서 `process.env.이름` 으로 읽어요.

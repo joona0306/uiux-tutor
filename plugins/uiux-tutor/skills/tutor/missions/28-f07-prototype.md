@@ -24,6 +24,12 @@
 
 제출: 프로토타입 공유 링크(보기 권한)와 관찰 기록표(문서 또는 캡처).
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- F07-1: 세 화면의 구성(요소 순서)이 원본 목록·상세 화면과 같음
+- F07-2: 해당 없음 (프로토타입 연결)
+- F07-3: 해당 없음 (사용성 테스트)
+
 ## 힌트 재료
 - 1단계: Figma 도움말 "Guide to prototyping in Figma" — https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma , 트리거·액션 정리는 https://help.figma.com/hc/en-us/articles/360040035834-Prototype-triggers 와 https://help.figma.com/hc/en-us/articles/360040035874-Prototype-actions
 - 2단계: Prototype 탭에서 핫스팟을 고르고 동그라미를 대상 프레임으로 끌어요. 오버레이는 연결을 만든 뒤 Interaction 창에서 Position 과 Close when clicking outside 를 정해요. 스크롤은 프레임 H 를 Fixed 로 두고 Overflow 를 Vertical 로. Change to 는 컴포넌트 세트 안 변형끼리 이어요. 과제는 "…를 해 보세요"처럼 목표만 읽어 줘요.

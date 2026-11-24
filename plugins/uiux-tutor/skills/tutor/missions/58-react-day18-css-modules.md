@@ -29,6 +29,12 @@
 | R18-2 개념 적용 | 카드 컴포넌트의 스타일을 `이름.module.css` 로 옮기고, class 둘을 조합해요 | `Card.module.css` 와 `import styles from ...` / class 이름이 camelCase(하이픈 없음) / DevTools 에서 class 이름이 원래 이름이 아니라 해시가 붙은 이름으로 보임 / 템플릿 리터럴로 class 두 개를 이어 붙임 |
 | R18-3 응용 | 필터 버튼과 메뉴(`NavLink`)에 "선택됨" 스타일을 조건부 class 로 붙이고, 전역 CSS 는 정리해요 | 선택한 필터 버튼만 `active` 스타일 / `NavLink` 는 `({ isActive }: NavLinkRenderProps)` 함수와 `import type` 사용 / 전역 CSS 에는 공통 기본값(본문 글꼴 등)만 남음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- R18-1: 해당 없음 (충돌 보여 주기)
+- R18-2: CSS Modules로 옮긴 뒤 카드 모양이 원본과 같음
+- R18-3: "선택됨" 표시 모양이 원본 메뉴·필터와 같음
+
 ## 힌트 재료
 - 1단계: Vite 공식 문서 "CSS Modules"(Features 페이지) — https://vite.dev/guide/features.html
   (참고) MDN "class 선택자" — https://developer.mozilla.org/ko/docs/Web/CSS/Reference/Selectors/Class_selectors (CSS Modules 사용법은 강의 Day 18 Step 2~5)

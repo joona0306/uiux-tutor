@@ -37,6 +37,12 @@
 | JS40-2 개념 적용 | `async` 함수 `loadItems` 로 `items.json` 을 받아 콘솔에 찍어요. `response.ok` 확인과 `try...catch` 로 실패에 대비해요 | `await fetch` → `if (!response.ok)` → `await response.json()` 순서 / 전체가 `try...catch` / 파일 이름을 일부러 틀리게 해 `catch` 에서 안내 문구가 나오는 것을 확인했다가 되돌림 / 콘솔에 배열이 나옴(`Promise {<pending>}` 아님) |
 | JS40-3 응용 | 받은 데이터로 고른 사이트의 카드 목록을 화면에 그려요(Day 05 방식). 불러오는 동안 `불러오는 중...` 을 보이고, 실패하면 안내 문구와 **다시 시도** 버튼을 보여요 | 카드 개수 = JSON 항목 개수 / 사용자에게 보일 글자는 `textContent`(`innerHTML` 아님) / 성공하면 `불러오는 중...` 이 사라짐 / 실패 시 안내 문구 + 다시 시도 버튼, 누르면 다시 불러옴 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- JS40-1: 해당 없음 (데이터 파일)
+- JS40-2: 해당 없음 (콘솔 결과)
+- JS40-3: 카드 요소 순서와 한 줄 카드 수가 원본과 같음
+
 ## 힌트 재료
 - 1단계: MDN `fetch` 사용하기 — https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch , 모듈 — https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules
 - 2단계: ① JSON 파일 만들기(큰따옴표) ② `utils.js` 에서 `export` ③ `main.js` 맨 위에서 `import` ④ `async function` 안에서 `try { fetch → ok 확인 → json } catch { 안내 }`. 화면 그리기는 JSON 을 받은 **뒤** 같은 `try` 안에서 해요.

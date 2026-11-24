@@ -26,6 +26,12 @@
 | W16-2 개념 적용 | 고른 사이트의 목록 카드에 마우스를 올리면 6px 위로 떠오르게 해요 | 카드 평소 규칙에 `transition: transform …` / `:hover` 에 `transform: translateY(-6px)` / 올렸다 뗄 때 둘 다 부드러움 |
 | W16-3 응용 | "불러오는 중" 점 같은 작은 요소를 `@keyframes` 로 깜빡이게 하고, 운영체제의 움직임 줄이기 설정에서는 꺼요 | `@keyframes` 이름과 `animation` 이름이 같음 / `animation` 에 시간·`infinite`·`alternate` / `@media (prefers-reduced-motion: reduce)` 가 파일 맨 아래에 있고 DevTools Rendering 탭에서 흉내 내 확인함 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- W16-1: 마우스를 올렸을 때 바뀌는 것이 원본 버튼과 같음
+- W16-2: 카드에 마우스를 올렸을 때 움직임 종류가 원본과 같음 (원본에 없으면 해당 없음)
+- W16-3: 해당 없음 (움직임 연습)
+
 ## 힌트 재료
 - 1단계: MDN `transition` · `@keyframes` · `prefers-reduced-motion` 문서(위 링크)
 - 2단계: `transition` 은 평소 규칙에 쓰고 `:hover` 에서는 바뀌는 값만 써요. 움직임 끄기 블록은 파일 맨 아래에 두어 앞의 규칙을 덮어쓰게 해요. 확인은 F12 → ⋮ → More tools → Rendering 에서 reduced motion 을 골라요.

@@ -31,6 +31,12 @@
 | P01-2 개념 적용 | `Esc` 로 메뉴를 닫고, 닫으면 포커스를 메뉴 버튼으로 돌려줘요 | `useRef<HTMLButtonElement>(null)` + `ref.current?.focus()` 사용 / 메뉴가 열렸을 때만 `keydown` 을 듣고 `removeEventListener` 로 정리함 / 마우스 없이 `Tab`→`Enter`→`Esc` 후 포커스 링이 버튼에 있음 |
 | P01-3 응용 | 고른 사이트의 사진 구역(상세 큰 사진 또는 슬라이드)에 `<dialog>` 모달 또는 `useState` 번호 하나짜리 슬라이드를 붙여요(자리 표시 사진) | 모달: `showModal()`/`close()` + `onClose` 로 state 맞춤 + 닫으면 연 버튼으로 포커스 / 슬라이드: 이전·다음 버튼에 `aria-label`, 영역에 `aria-live="polite"` / 키보드 점검표(Tab 순서·포커스 링·Esc·아이콘 버튼 이름)를 마우스 없이 통과 / `npm run build`·`npm run lint` 통과 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- P01-1: 메뉴 버튼 자리와 열린 메뉴 모양이 원본과 같음
+- P01-2: 해당 없음 (키보드 동작)
+- P01-3: 사진 구역 배치가 원본과 같음
+
 ## 힌트 재료
 - 1단계: MDN aria-expanded — https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded , react.dev useRef — https://ko.react.dev/reference/react/useRef
 - 2단계: 메뉴가 열려 있을 때만 `useEffect` 안에서 `document.addEventListener('keydown', …)`, 정리 함수에서 `removeEventListener`. 모달은 `useEffect` 에서 `open` 값에 따라 `dialogRef.current?.showModal()` / `close()`.

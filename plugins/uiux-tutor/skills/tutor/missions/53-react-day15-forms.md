@@ -42,6 +42,12 @@
 | R15-2 개념 적용 | 제출하면 목록에 한 줄 추가되고, 줄마다 삭제 버튼이 있어요 | `type Review = { id: number; text: string }` 와 `useState<Review[]>([])` / `onSubmit` 에서 `event.preventDefault()` 로 새로고침 안 됨 / 추가는 `[...]`, 삭제는 `filter` 로 새 배열 |
 | R15-3 응용 | 입력 폼과 목록을 `ReviewForm`·`ReviewList` 컴포넌트로 나누고, state 는 공통 부모에 둬요. 후기 개수는 계산해서 보여 줘요 | 폼 props 에 `onAdd: (text: string) => void` / 후기 개수를 state 로 따로 만들지 않고 `목록.length` 로 계산 / `npm run build` 와 `npm run lint` 오류 없음 |
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- R15-1: 입력 구역 배치가 원본과 같음 (원본에 없으면 해당 없음)
+- R15-2: 해당 없음 (목록 추가·삭제)
+- R15-3: 해당 없음 (컴포넌트 나누기)
+
 ## 힌트 재료
 - 1단계: React 공식 문서 "input" — https://ko.react.dev/reference/react-dom/components/input
 - 2단계: 입력창 글은 `text` state, 제출된 글들은 `reviews` state 로 따로 둬요. 제출 함수에서 새 글 객체(`id` 포함)를 만들어 `reviews` 에 합치고 `text` 를 비워요. 삭제는 `id` 가 다른 것만 남겨요.

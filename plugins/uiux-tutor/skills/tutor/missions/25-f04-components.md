@@ -24,6 +24,12 @@
 
 제출: Figma 파일 링크(보기 권한) 또는 Assets 탭·Layers·오른쪽 속성 칸이 보이는 캡처.
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- F04-1: 버튼 모양(모서리·채움/테두리·아이콘 자리)이 원본 버튼과 같음
+- F04-2: primary·secondary 가 원본의 두 가지 버튼 모양과 맞음
+- F04-3: 카드 컴포넌트의 요소 순서가 원본 카드와 같음
+
 ## 힌트 재료
 - 1단계: Figma 도움말 "Create and use variants" — https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants , 속성은 "Explore component properties" — https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties
 - 2단계: 변형 하나를 완성하고 복제해 이름의 마지막 칸만 바꾸기 → 모두 선택해 Combine as variants → 속성 이름을 더블클릭해 바꾸기. 속성은 세트를 고른 채 Properties 옆 `+` 로 만들고, 글자·아이콘 레이어를 골라 Apply property 로 연결해요.

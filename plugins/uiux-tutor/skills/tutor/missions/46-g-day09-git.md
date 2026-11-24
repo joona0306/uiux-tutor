@@ -27,6 +27,12 @@
 
 확인 방법: 위 명령의 실행 결과를 붙여 주거나, 폴더를 열어 두면 튜터가 `git log --oneline` · `git status` 로 확인해요.
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- G09-1: 해당 없음 (Git)
+- G09-2: 해당 없음 (Git)
+- G09-3: 해당 없음 (Git)
+
 ## 힌트 재료
 - 1단계: Git 문서 — https://git-scm.com/docs/git-status , https://git-scm.com/docs/git-add , https://git-scm.com/docs/git-commit , https://git-scm.com/docs/git-log , https://git-scm.com/docs/gitignore
 - 2단계: ① 설정은 `git config --global` 로 이름·이메일·기본 브랜치 이름을 한 번만 ② 프롬프트의 폴더가 내 프로젝트 폴더인지 확인한 뒤 `git init` ③ 파일 하나씩 `git add 파일이름` → `git commit -m "type: 무엇을"` ④ `.gitignore` 는 줄마다 파일·폴더 이름 하나, 저장하고 `git status` 로 사라졌는지 확인

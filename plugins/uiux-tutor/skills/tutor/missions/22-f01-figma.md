@@ -25,6 +25,12 @@
 
 제출: Figma 파일 링크(보기 권한) 또는 Layers 패널과 오른쪽 사이드바가 같이 보이는 캡처.
 
+## 원본 닮음
+미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
+- F01-1: 카드 프레임의 요소 순서·크기 비율이 원본 카드와 같음
+- F01-2: Auto Layout 결과가 원본 카드 배치와 같음
+- F01-3: `card-row` 의 카드 수·카드 사이 간격이 원본과 비슷함
+
 ## 힌트 재료
 - 1단계: Figma 도움말 "Guide to auto layout" — https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout (방향·Gap·Padding·Resizing)
 - 2단계: 카드 프레임을 고르고 `Shift + A` → 방향 Vertical → Gap·Padding 숫자 넣기. 자식은 Layers 순서대로 쌓여요. 사진은 W 드롭다운에서 Fill container, H 는 Fixed. 가격과 버튼은 따로 골라 `Shift + A` 로 `footer`, 가격의 W 를 Fill container.
