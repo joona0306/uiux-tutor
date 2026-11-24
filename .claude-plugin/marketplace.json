@@ -1,0 +1,17 @@
+{
+  "name": "uiux-tutor-market",
+  "owner": {
+    "name": "uiux-tutor"
+  },
+  "plugins": [
+    {
+      "name": "uiux-tutor",
+      "source": "./plugins/uiux-tutor",
+      "description": "원하는 사이트를 골라 클론코딩으로 배우는 UIUX 프론트엔드 튜터",
+      "author": {
+        "name": "uiux-tutor"
+      }
+    }
+  ],
+  "description": "UIUX 프론트엔드 클론코딩 튜터 플러그인"
+}
