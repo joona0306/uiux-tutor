@@ -19,10 +19,13 @@
   "range": { "from": 12, "to": 21 },
   "workspace": "clone",
   "current": { "unit": 13, "mission": "W13-2" },
+  "weak": ["미디어쿼리 표기"],
+  "deploys": [{ "unit": 47, "tool": "GitHub Pages", "url": "https://아이디.github.io/travel-note/" }],
   "units": [
     {
       "no": 13,
       "title": "W13. Grid",
+      "learned": true,
       "missions": [
         {
           "id": "W13-2",
@@ -41,6 +44,9 @@
 ```
 
 - `status`: `todo` | `doing` | `done`
+- `learned`: 그 회차의 배우기(미니 수업)를 끝냈는지
+- `weak`: 평가에서 보완이 나온 개념(상태에서 복습 추천에 씀)
+- `deploys`: 배포한 주소 기록
 - `range.from`·`to`: curriculum.md 의 회차 번호
 - 진행률 = 모든 `units[].missions[]` 중 `done` 수 ÷ 전체 미션 수
 - 개인정보(이름·연락처), 비밀 키는 넣지 않는다.

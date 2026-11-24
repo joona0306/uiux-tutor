@@ -1,6 +1,6 @@
 ---
 name: setup
-description: uiux-tutor 처음 설정 — 사이트를 직접 보는 브라우저 도구(Node) 확인, 진행률·사용량을 보여 주는 상태 줄 설치
+description: uiux-tutor 처음 설정 — 원본 사이트를 보는 Chrome 연동 확인, 진행률·사용량을 보여 주는 상태 줄 설치
 disable-model-invocation: true
 ---
 
@@ -8,9 +8,18 @@ disable-model-invocation: true
 
 학습자 컴퓨터를 **확인하고, 바꾸기 전에 꼭 물어본다.** 학습자가 "예"라고 한 것만 한다.
 
-## 1. 브라우저 도구(원본 사이트 보기) 확인
+## 1. Chrome 연동 (원본 사이트 보기 — 가장 먼저)
+튜터는 학습자의 실제 Chrome으로 사이트를 본다(자동 브라우저는 일부 사이트에서 막힘).
+1. `mcp__claude-in-chrome__*` 도구가 이미 보이면 "Chrome 연동이 켜져 있어요"라고 알리고 "2. 상태 줄 설치"로 간다(1-2는 건너뜀).
+2. 없으면 안내한다(학습자가 직접):
+   - Chrome 웹 스토어에서 **Claude in Chrome** 확장을 설치하고(1.0.36 이상), Claude 계정으로 로그인한다.
+   - Claude Code에서 `/chrome` 을 입력해 **Enabled by default** 를 켠다. 또는 다음부터 `claude --chrome` 으로 시작한다.
+   - 필요한 것: Claude Pro 이상 플랜(공식 문서), Chrome 또는 Edge. WSL에서는 안 된다.
+   - 켠 뒤 Claude Code를 다시 시작한다.
+
+## 1-2. 보조 브라우저 도구(Playwright) 확인 — Chrome이 안 될 때만
 1. `node -v` 를 실행한다.
-   - 결과가 없거나 v20보다 낮으면: "원본 사이트를 직접 열어 보려면 Node.js 20 이상이 필요해요. https://nodejs.org 에서 LTS를 설치한 뒤 Claude Code를 다시 시작하세요. 그전까지는 사이트 화면 캡처를 붙여 주시면 돼요."라고 안내하고 2로 간다(설치는 학습자가 직접).
+   - 결과가 없거나 v20보다 낮으면: "보조 브라우저 도구를 쓰려면 Node.js 20 이상이 필요해요(React 단원부터는 어차피 필요해요). https://nodejs.org 에서 LTS를 설치한 뒤 Claude Code를 다시 시작하세요. 그전까지는 사이트 화면 캡처를 붙여 주시면 돼요."라고 안내하고 "2. 상태 줄 설치"로 간다(설치는 학습자가 직접).
 2. 학습자에게 `/mcp` 를 입력해 `plugin:uiux-tutor:playwright` 가 연결됐는지 보게 한다. 연결 안 됨이면 오류 문구를 그대로 붙여 달라고 하고, 읽은 내용으로 원인을 설명한다(추측하지 않는다).
 
 ## 2. 상태 줄 설치 (진행률 · 대화 사용량 · 5시간·주간 사용량)
