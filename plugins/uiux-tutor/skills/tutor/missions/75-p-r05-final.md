@@ -1,5 +1,23 @@
 # 75. R05. 개인 실습 — 미션 예시 (배포 ③, 완성)
 
+## 배우기 재료
+- 핵심 개념 (새 기술은 없어요. 앞 회차를 한 바퀴 돌리는 회차예요)
+  - **범위 정하기**: 한 화면, 필수 기능 3~4개, 선택 1~2개. 범위가 크면 끝나지 않아요. Figma 에서 한 프레임을 끝까지 다듬는 것과 같아요.
+  - **매일 커밋·배포는 첫날부터**: 배포를 마지막 날에 처음 하면 빌드 오류를 한꺼번에 만나요. 첫날 저장소를 만들고 Vercel 에 연결해 둬요.
+  - **품질 점검표에 숫자로 남기기**: 기기 모드(320·768·1280)·Lighthouse·`npm run lint`·W3C 결과를 README 에 적어요(R02).
+- 작은 따라 치기 (사이트와 상관없이 직접 쳐요. 저장소의 `README.md` 틀을 만들어요)
+  ```markdown
+  # 프로젝트 이름 (교육용 클론 — 원본: ○○)
+  ## 배포 주소
+  ## 만든 것
+  ## 쓴 기술
+  ## 원본과 다른 점
+  ## 점검 결과 (Lighthouse 접근성 / lint / 가로 넘침)
+  ## 출처
+  ```
+- 예상해 보기: 범위를 "화면 3개"로 잡고 시작하면 마지막 날 무엇이 위험할까요? — 답: 배포·점검·README 를 할 시간이 없어져요. 한 화면을 끝까지 만들고, 남는 시간에 선택 기능을 더해요.
+- 공식 문서: [Next.js 배포](https://nextjs.org/docs/app/getting-started/deploying) · [접근성 배우기 (web.dev)](https://web.dev/learn/accessibility) · [README 정보 (GitHub Docs)](https://docs.github.com/ko/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+
 | 미션 | 할 일 | 완료 기준 |
 |---|---|---|
 | P05-1 범위 | 클론할 화면 하나와 기능 범위를 정해요(필수·선택) | 필수 기능 3~4개, 선택 1~2개를 표로 / 원본 구역 지도와 짝지음 |

@@ -1,7 +1,7 @@
 {
   "name": "uiux-tutor",
   "displayName": "UIUX 클론코딩 튜터",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "원하는 사이트를 골라 클론코딩으로 배우는 UIUX 프론트엔드 튜터. 미션 → 힌트 → '다음'이면 내 코드를 평가하고 다음 미션을 줘요.",
   "keywords": [
     "tutor",

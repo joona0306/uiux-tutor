@@ -31,6 +31,7 @@
           "id": "W13-2",
           "title": "목록을 grid로",
           "area": "여행지 목록",
+          "criteria": ["640px 이상 2열, 1024px 이상 3열", "@media (width >= 640px) 모양", "간격은 gap"],
           "status": "doing",
           "hints": 1,
           "attempts": 2,
@@ -44,6 +45,7 @@
 ```
 
 - `status`: `todo` | `doing` | `done`
+- `criteria`: 미션을 줄 때 보여 준 완료 기준 그대로(평가 때 빠짐없이 판정)
 - `learned`: 그 회차의 배우기(미니 수업)를 끝냈는지
 - `weak`: 평가에서 보완이 나온 개념(상태에서 복습 추천에 씀)
 - `deploys`: 배포한 주소 기록

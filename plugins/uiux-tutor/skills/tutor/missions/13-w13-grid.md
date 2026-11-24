@@ -1,5 +1,22 @@
 # 13. W13. Grid — 미션 예시
 
+## 배우기 재료
+- 핵심 개념
+  - **grid 는 부모에, 칸 수는 columns 로**: `display: grid` 를 목록(부모)에 주고 `grid-template-columns: repeat(3, 1fr)` 처럼 열을 정해요. `fr` 은 남는 공간을 나눈 한 몫이고, 칸 사이는 `gap`(`gap: 24px 16px` 이면 앞 값이 줄 사이, 뒤 값이 칸 사이)으로 줘요. Figma 의 Layout grid(Columns)와 비슷해요.
+  - **칸 수가 저절로 바뀌는 목록**: `repeat(auto-fill, minmax(200px, 1fr))` 은 "최소 200px, 남으면 늘어나는 칸"을 자리가 닿는 만큼 채워서 미디어쿼리 없이 칸 수가 바뀌어요.
+  - **영역 지도**: `grid-template-areas` 로 머리글·옆 메뉴·본문·바닥글 지도를 그리고 각 요소에 `grid-area` 이름을 붙여요. 줄 하나면 flex, 바둑판이면 grid 예요.
+- 작은 따라 치기 (사이트와 상관없이 직접 쳐요. `.gallery` 안에 `<div>` 6개를 넣어요)
+  ```css
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  .gallery div { height: 80px; background: #cbd5e1; }
+  ```
+- 예상해 보기: `minmax(120px, 1fr)` 의 `120px` 를 `200px` 로 바꾸면 창 폭 600px 에서 칸이 몇 개 놓일까요(gap 은 12px)? — 답: 2개(200px 칸 3개는 gap 까지 624px 가 필요해요). 120px 일 때는 4개예요.
+- 공식 문서: [그리드 레이아웃 기본 개념 (MDN)](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout) · [grid-template-columns (MDN)](https://developer.mozilla.org/ko/docs/Web/CSS/grid-template-columns)
+
 | 미션 | 할 일 | 완료 기준 |
 |---|---|---|
 | W13-1 기본 구조 | 고른 사이트의 카드 목록 구역을 HTML로 만들고(카드 6개 이상, 자리 표시 사진), grid로 3열 바둑판을 만들어요 | `display: grid` 가 **부모**(목록)에 있음 / `grid-template-columns: repeat(3, 1fr)` / 간격은 `gap` (카드 margin 아님) |

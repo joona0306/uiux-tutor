@@ -1,5 +1,20 @@
 # 66. Day 24. Vercel 배포 — 미션 예시 (배포 ②)
 
+## 배우기 재료
+- 핵심 개념
+  - **React Router → Next.js 대응**: `<Route path="/projects/:slug">` 는 `app/projects/[slug]/page.tsx` 폴더가 되고, `useParams()` 는 `await props.params`(+ `PageProps`), `to` 는 `href` 가 돼요.
+  - **빌드로 점검하기**: `npm run build` 는 배포와 같은 방식으로 사이트를 만들어 보고 타입 오류도 잡아 줘요. 내 컴퓨터에서 통과해야 배포에서도 통과해요. `npm run lint` 도 함께 통과시켜요.
+  - **GitHub → Vercel 자동 배포**: GitHub 저장소를 Vercel 에 연결해 두면 `git push` 할 때마다 새로 빌드해서 배포해요. 키 같은 비밀 값은 코드가 아니라 Vercel 설정의 환경 변수에 넣어요.
+- 작은 따라 치기 (사이트와 상관없이 직접 쳐요. `app/globals.css` 맨 아래에 더해요)
+  ```css
+  @theme {
+    --color-brand: #0f766e;
+  }
+  ```
+  아무 `page.tsx` 에 `<h1 className="text-brand">제목</h1>` 을 넣어 글자색이 바뀌는지 보고, 터미널에서 `npm run build` 와 `npm run lint` 를 차례로 쳐요.
+- 예상해 보기: 상세 페이지에서 `await props.params` 의 `await` 를 지운 채 `npm run build` 를 하면? — 답: 타입 오류로 빌드가 멈춰요. 그래서 push 전에 로컬에서 먼저 빌드해 봐요.
+- 공식 문서: [배포 (Next.js)](https://nextjs.org/docs/app/getting-started/deploying) · [테마 변수 (Tailwind CSS)](https://tailwindcss.com/docs/theme) · [환경 변수 (Next.js)](https://nextjs.org/docs/app/guides/environment-variables)
+
 | 미션 | 할 일 | 완료 기준 |
 |---|---|---|
 | N24-1 기본 구조 | Next.js 클론이 내 컴퓨터에서 빌드되게 해요 | `npm run build` 오류 없음 / `npm run lint` 오류 없음 / `.env.local` 이 `.gitignore` 에 있음 |

@@ -1,5 +1,21 @@
 # 14. W14. 반응형 ① 미디어쿼리·모바일 우선 — 미션 예시
 
+## 배우기 재료
+- 핵심 개념
+  - **viewport 메타 태그**: `<meta name="viewport" content="width=device-width, initial-scale=1.0">` 가 없으면 휴대폰이 페이지를 데스크톱 폭(약 980px)으로 그려서 작게 줄여 보여요. 그러면 미디어쿼리도 기대대로 안 먹어요.
+  - **모바일 우선**: 좁은 화면 스타일을 기본으로 쓰고, 넓어질 때 `@media (width >= 640px) { 선택자 { … } }` 로 **더해요**. 괄호는 두 겹이에요. 작은 폭부터 큰 폭 순서로 써야 큰 폭 규칙이 위에서 덮어써요.
+  - **브레이크포인트**: 이 과정은 640 · 768 · 1024 를 써요(나중 Tailwind 의 `sm` · `md` · `lg` 와 같아요). Figma 의 모바일·태블릿·데스크톱 프레임 폭과 짝이에요.
+- 작은 따라 치기 (사이트와 상관없이 직접 쳐요. `<head>` 에 viewport 메타 태그를 넣고 `.tiles` 안에 `<div>` 4개를 넣어요)
+  ```css
+  .tiles { display: grid; gap: 8px; }
+  .tiles div { height: 60px; background: #cbd5e1; }
+  @media (width >= 640px)  { .tiles { grid-template-columns: repeat(2, 1fr); } }
+  @media (width >= 1024px) { .tiles { grid-template-columns: repeat(4, 1fr); } }
+  ```
+  F12 → 기기 모드(Toggle device toolbar)에서 폭을 375 · 800 · 1100 으로 바꿔 봐요.
+- 예상해 보기: 위 두 `@media` 의 순서를 바꿔 1024px 규칙을 먼저 쓰면 폭 1100px 에서 몇 열일까요? — 답: 2열. 두 규칙 다 맞는데 아래(나중)의 640px 규칙이 덮어써서 4열이 안 돼요. 그래서 작은 폭부터 써요.
+- 공식 문서: [미디어 쿼리 사용하기 (MDN)](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) · [viewport 메타 태그 (MDN)](https://developer.mozilla.org/ko/docs/Web/HTML/Guides/Viewport_meta_element)
+
 | 미션 | 할 일 | 완료 기준 |
 |---|---|---|
 | W14-1 기본 구조 | 휴대폰 폭(375px)에서 고른 사이트의 첫 화면 구역들이 한 줄로 쌓이게 만들어요 | `<head>` 에 viewport 메타 태그 / 미디어쿼리 밖(기본) 스타일이 **좁은 화면용** / 375px에서 가로 스크롤 없음 |

@@ -1,5 +1,35 @@
 # 52. Day 14. 조건부 렌더링과 목록 — 미션 예시
 
+## 배우기 재료
+- 핵심 개념
+  - **조건부 렌더링**: 둘 중 하나는 `조건 ? A : B`, 있을 때만 보이려면 `조건 && A` 로 써요. `&&` 왼쪽에 숫자를 두면 `0` 이 화면에 찍힐 수 있어요.
+  - **목록 그리기**: 배열을 `map` 으로 JSX 로 바꾸고, 줄마다 `key={데이터의 id}` 를 붙여요(순서 번호 index 는 순서가 바뀌면 헷갈려요). Figma 에서 반복 그리드로 같은 카드를 늘어놓는 것과 비슷해요.
+  - **거르기**: state 에는 "사용자가 고른 조건"만 두고, 보여 줄 목록은 `filter` 로 매번 계산해요. 결과가 0개일 때 안내 문구를 보여 줘요.
+- 작은 따라 치기 (사이트와 상관없이 직접 쳐요)
+  ```tsx
+  import { useState } from 'react';
+
+  type Fruit = { id: number; name: string; stock: number };
+  const fruits: Fruit[] = [
+    { id: 1, name: '사과', stock: 3 },
+    { id: 2, name: '배', stock: 0 },
+  ];
+
+  function FruitList() {
+    const [onlyStock, setOnlyStock] = useState(false);
+    const visible = fruits.filter((f) => (onlyStock ? f.stock > 0 : true));
+    return (
+      <div>
+        <button onClick={() => setOnlyStock(!onlyStock)}>재고 있는 것만</button>
+        <ul>{visible.map((f) => <li key={f.id}>{f.name} {f.stock > 0 ? '있음' : '품절'}</li>)}</ul>
+      </div>
+    );
+  }
+  export default FruitList;
+  ```
+- 예상해 보기: `<p>{fruits.length && <b>목록 있음</b>}</p>` 에서 `fruits` 가 빈 배열이면 화면에 무엇이 보일까요? — 답: `0` 이 찍혀요(`0 && ...` 은 `0` 을 돌려줘서). `fruits.length > 0 && ...` 로 써요.
+- 공식 문서: [조건부 렌더링 (React)](https://ko.react.dev/learn/conditional-rendering) · [목록 렌더링 (React)](https://ko.react.dev/learn/rendering-lists)
+
 | 미션 | 할 일 | 완료 기준 |
 |---|---|---|
 | R14-1 기본 구조 | 고른 사이트의 카드 목록을 React 컴포넌트로 만들어요(가상 데이터 배열, `src/types.ts` 에 타입) | `type`(또는 interface)으로 카드 데이터 모양 정의, `import type` 으로 가져옴 / `배열.map` 으로 카드 그림 / `key` 에 데이터의 `id` (index 아님) |
