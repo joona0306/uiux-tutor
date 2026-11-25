@@ -1,6 +1,6 @@
 # 진도 파일 모양 — `.tutor/progress.json`
 
-학습자가 Claude Code를 연 폴더의 `.tutor/progress.json`. 튜터와 상태 줄 스크립트가 함께 읽는다.
+학습자가 Claude Code를 연 폴더의 `.tutor/progress.json`. 튜터와 상태 줄(`hooks/status.ts`, 예전 방식은 `scripts/statusline.*`)이 함께 읽는다.
 
 ```json
 {

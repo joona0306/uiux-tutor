@@ -40,7 +40,7 @@ claude plugin install uiux-tutor@uiux-tutor-market
 
 1. 공부할 폴더를 만들고 VS Code로 열어요. (예: `uiux-study`)
 2. VS Code 터미널(`` Ctrl + ` ``)에서 `claude --chrome` 을 실행해요.
-3. 처음 한 번만 `/uiux-tutor:setup` — 화면 아래에 진행률을 보여 주는 상태 줄을 넣어 줘요.
+3. 처음 한 번만 `/uiux-tutor:setup` — Chrome 연동을 확인해 줘요. (진행률 상태 줄은 설치 없이 자동으로 나와요.)
 4. `/uiux-tutor:tutor 시작` — 튜터가 **어디부터 배울지**와 **따라 만들 사이트 주소**를 물어요.
 
 > 💡 이미 공부하던 폴더에서 시작해도 돼요. 튜터가 내 코드를 읽어 보고 어느 회차부터 하면 좋을지 알려 줘요.
@@ -80,7 +80,7 @@ claude plugin install uiux-tutor@uiux-tutor-market
 
 ## 6. 상태 줄
 
-`/uiux-tutor:setup` 을 하면 화면 아래에 이렇게 보여요.
+튜터를 시작한 폴더에서는 입력창 아래에 이렇게 보여요. 따로 설치할 것은 없어요(플러그인이 직접 띄워요, Claude Code 2.1.331에서 확인).
 
 ```
 📚 진행률 33% (2/6) · 구역 완성 3/11 · 흐름 완성 0/3 · 대화 42% · 5시간 23% · 주간 61%
@@ -89,6 +89,8 @@ claude plugin install uiux-tutor@uiux-tutor-market
 - **진행률**: 끝낸 미션 / 계획한 미션
 - **구역 · 흐름 완성**: 원본처럼 다 만든 구역·흐름 수
 - **대화 · 5시간 · 주간**: Claude 사용량 (자세히는 `/usage`)
+
+> 💡 안 보이면 `claude update` 로 Claude Code를 올리고 다시 열어 보세요. 0.7 이하에서 `/uiux-tutor:setup` 으로 상태 줄을 넣었다면 같은 내용이 두 번 보일 수 있어요 — `/uiux-tutor:setup` 을 한 번 더 하면 예전 설정을 정리해 줘요.
 
 ## 7. 배포
 
@@ -129,7 +131,7 @@ claude plugin marketplace update uiux-tutor-market
 | 잠깐 끄기 / 켜기 | `claude plugin disable uiux-tutor` / `claude plugin enable uiux-tutor` |
 | 삭제 | `claude plugin uninstall uiux-tutor` → `claude plugin marketplace remove uiux-tutor-market` |
 
-> 업데이트하거나 삭제해도 공부 폴더의 진도(`.tutor/`)는 남아요. 상태 줄을 빼려면 `~/.claude/settings.json` 에서 `"statusLine"` 부분을 지우세요.
+> 업데이트하거나 삭제해도 공부 폴더의 진도(`.tutor/`)는 남아요. 상태 줄은 플러그인을 끄거나 지우면 같이 사라져요(예전 방식으로 넣었다면 `~/.claude/settings.json` 의 `"statusLine"` 부분도 지우세요).
 
 ## 9. 자주 묻는 질문
 
@@ -157,6 +159,7 @@ claude plugin marketplace update uiux-tutor-market
 
 | 버전 | 날짜 | 바뀐 것 |
 |---|---|---|
+| 0.8.0 | 2026-11-25 | 상태 줄을 플러그인이 직접 띄움(설정·복사 없음, 업데이트로 같이 바뀜, 한글 폴더 이름에서 빈 줄이 되던 문제 해결) |
 | 0.7.1 | 2026-11-25 | 화면 값(색·간격·글자 크기)까지 똑같이 따라 만드는 규칙, 아이콘·글꼴·짧은 낱말 기준 |
 | 0.7.0 | 2026-11-25 | 서비스 지도(화면 목록·유저플로우), 흐름 전체 클론, 로그인·테스트 결제, 프로젝트 1을 "똑같이 클론 → 개선"으로 |
 | 0.6.0 | 2026-11-25 | 미션마다 "원본 닮음" 기준, 회차 끝 완성 확인, 상태 줄에 구역 완성 |
@@ -175,7 +178,9 @@ claude plugin marketplace update uiux-tutor-market
 plugins/uiux-tutor/
 ├─ .claude-plugin/plugin.json          플러그인 정보(버전)
 ├─ .mcp.json                           보조 브라우저(Playwright MCP)
-├─ scripts/statusline.ps1 · .sh        상태 줄
+├─ hooks/hooks.json · status.ts        상태 줄 (플러그인이 직접 띄움)
+├─ tests/status.test.ts                상태 줄 테스트 (`claude plugin test plugins/uiux-tutor`)
+├─ scripts/statusline.ps1 · .sh        예전 방식 상태 줄 (안 보일 때만)
 └─ skills/
    ├─ setup/SKILL.md                   설정 도우미
    └─ tutor/

@@ -2,7 +2,11 @@
 # Claude Code가 stdin으로 넘기는 JSON + 현재 폴더의 .tutor/progress.json 으로 한 줄을 만든다.
 $ErrorActionPreference = 'SilentlyContinue'
 [Console]::OutputEncoding = [Text.Encoding]::UTF8
+# Claude Code는 UTF-8로 넘겨준다. 한국어 Windows의 기본(CP949)으로 읽으면 한글 폴더 이름이 깨지면서
+# JSON 따옴표까지 먹혀 읽기가 통째로 실패한다(상태 줄이 빈 줄이 됨). 그래서 UTF-8로 읽는다.
+[Console]::InputEncoding = [Text.Encoding]::UTF8
 $d = [Console]::In.ReadToEnd() | ConvertFrom-Json
+if (-not $d) { Write-Output '📚 uiux-tutor'; exit 0 }
 $dir = $d.workspace.current_dir
 if (-not $dir) { $dir = $d.cwd }
 $parts = @()
