@@ -104,25 +104,20 @@ claude plugin install uiux-tutor@uiux-tutor-market
 
 ## 8. 업데이트 · 삭제
 
-**업데이트** (다시 설치할 필요 없어요)
-
-```bash
-claude plugin update uiux-tutor@uiux-tutor-market
-```
-
-그다음 Claude Code를 다시 열어요. 자동으로 받고 싶으면 `/plugin` → **Marketplaces** → `uiux-tutor-market` → 자동 업데이트를 켜요. (개인이 만든 가게는 기본으로 꺼져 있어요.)
-
-<details>
-<summary>"이미 최신"이라는데 새 버전이 있을 것 같을 때 · 내 버전 확인</summary>
-
-가게 목록을 먼저 새로 고친 뒤 업데이트 명령을 다시 실행하세요.
+**업데이트** (다시 설치할 필요 없어요) — 두 줄을 차례로 입력하세요.
 
 ```bash
 claude plugin marketplace update uiux-tutor-market
 ```
 
-`claude plugin list` 의 `uiux-tutor` 버전이 아래 "바뀐 내용" 맨 위 버전과 같으면 최신이에요.
-</details>
+```bash
+claude plugin update uiux-tutor@uiux-tutor-market
+```
+
+첫 줄은 GitHub에서 새 목록을 받아 오고, 둘째 줄이 플러그인을 바꿔요. 그다음 Claude Code를 다시 열어요(또는 `/reload-plugins`).
+
+- 내 버전 확인: `claude plugin list` 의 `uiux-tutor` 버전이 아래 "바뀐 내용" 맨 위 버전과 같으면 최신이에요.
+- 자동으로 받고 싶으면 `/plugin` → **Marketplaces** → `uiux-tutor-market` → 자동 업데이트를 켜요. (개인이 만든 가게는 기본으로 꺼져 있어요.)
 
 **끄기 · 삭제**
 
