@@ -15,18 +15,19 @@
   ```
   `npm run build` 를 하고 표에서 `/shops/[slug]` 아래에 `/shops/a`, `/shops/b` 가 보이는지 찾아봐요.
 - 예상해 보기: `generateStaticParams` 를 지우고 `npm run build` 를 하면 표의 `/shops/[slug]` 는 무엇으로 바뀔까요? — 답: 미리 만든 주소 목록이 없으니 `●` 대신 `ƒ`(요청마다 만듦)로 나와요.
-- 공식 문서: [generateStaticParams (Next.js)](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) · [page 파일의 params·PageProps (Next.js)](https://nextjs.org/docs/app/api-reference/file-conventions/page) · [서버·클라이언트 컴포넌트 (Next.js)](https://nextjs.org/docs/app/getting-started/server-and-client-components) · [TypeScript (React)](https://ko.react.dev/learn/typescript)
+- **검색·공유에 보이는 정보 (SEO)**: `generateMetadata` 가 돌려주는 `description` 은 `<meta name="description">` 이 되고, `openGraph` 는 카카오톡·SNS에 주소를 붙였을 때 뜨는 미리보기 카드(`og:title`·`og:description`·`og:image`)가 돼요. Open Graph 사진은 **전체 주소**여야 해서, `app/layout.tsx` 의 `metadata` 에 `metadataBase: new URL('https://내-배포-주소')` 를 두면 `'/og.png'` 처럼 짧게 써도 채워져요.
+- 공식 문서: [generateMetadata — description·openGraph·metadataBase (Next.js)](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) · [Open Graph 기본 속성 (ogp.me, 영어)](https://ogp.me/) · [generateStaticParams (Next.js)](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) · [page 파일의 params·PageProps (Next.js)](https://nextjs.org/docs/app/api-reference/file-conventions/page) · [서버·클라이언트 컴포넌트 (Next.js)](https://nextjs.org/docs/app/getting-started/server-and-client-components) · [TypeScript (React)](https://ko.react.dev/learn/typescript)
 
 | 미션 | 할 일 (고른 사이트의 구역에 맞춰 바꿔요) | 완료 기준 |
 |---|---|---|
 | N67-1 기본 구조 | 새 `create-next-app` 프로젝트에서 목록 → `[slug]` 상세 → 404 를 혼자 만들어요(가상 데이터 3개 이상) | 목록·상세·없는 slug(404) 세 주소가 모두 열림 / 상세는 `PageProps` 와 `await props.params` 를 씀 / `find` 결과가 없으면 `notFound()` |
-| N67-2 개념 적용 | 상세 사진(`Image`, `width`·`height`)과 탭 제목(`generateMetadata`)을 넣고 `generateStaticParams` 로 상세를 미리 만들어요 | `Image` 에 `width`·`height` 있음 / 상세마다 탭 제목이 다름 / `npm run build` 표에서 상세 주소가 `●` |
+| N67-2 개념 적용 | 상세 사진(`Image`, `width`·`height`)과 탭 제목·설명·공유 미리보기(`generateMetadata` 의 `title`·`description`·`openGraph`)를 넣고 `generateStaticParams` 로 상세를 미리 만들어요 | `Image` 에 `width`·`height` 있음 / 상세마다 탭 제목과 `description` 이 다름 / `openGraph` 에 `title`·`description`·`images` 가 있고, 사진 주소는 전체 주소이거나 `app/layout.tsx` 의 `metadataBase` 로 채워짐 / 페이지 소스(Ctrl+U)에 `<meta name="description">` 과 `og:title` 이 보임 / `npm run build` 표에서 상세 주소가 `●` |
 | N67-3 응용 | 값마다 둘 곳을 정해요(목록 데이터, 고른 태그, 열고 닫는 메뉴, 찜 목록). 정한 이유를 README 에 표로 써요 | 표에 값 4개와 "서버 / 주소 / `useState` / Context" 중 하나씩 있음 / 클라이언트 컴포넌트는 `'use client'` 가 필요한 파일에만 있음 / `npm run build` 와 `npm run lint` 오류 없음 |
 
 ## 원본 닮음
 미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
 - N67-1: 흐름 닮음: 목록 → 상세 → 없는 주소 흐름의 화면 구성이 원본과 같음
-- N67-2: 해당 없음 (사진·메타데이터)
+- N67-2: 해당 없음 (사진·메타데이터·SEO)
 - N67-3: 해당 없음 (상태 위치 정하기)
 
 ## 힌트 재료

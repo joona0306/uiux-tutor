@@ -5,6 +5,7 @@
   - **시맨틱 태그**: `header`(머리글) · `nav`(메뉴) · `main`(본문, 페이지에 하나) · `section`(주제 묶음) · `article`(따로 읽어도 되는 글) · `aside`(곁들이는 정보) · `footer`(바닥글). 모양은 없고 **뜻**만 더해요. Figma로 치면 프레임에 "Header", "Footer" 같은 레이어 이름을 붙이는 것과 비슷해요.
   - **class와 id**: `class` 는 여러 요소에 같은 이름을 줄 수 있고, `id` 는 페이지에 하나뿐이에요. `<a href="#faq">` 는 `id="faq"` 인 곳으로 같은 페이지 안에서 이동해요. 묶기용 `div` 는 뜻이 있는 태그로 안 될 때만 써요.
   - **접근성 기초 다섯 가지**: 그림 `alt` · 링크 글자("여기" 금지) · 제목 단계 · 랜드마크(header·nav·main·footer) · `lang`. W3C 검사기(Nu Html Checker)로 오류와 줄 번호를 확인해요.
+  - **검색에 보이는 두 줄 (SEO 기초)**: `<head>` 의 `<title>` 은 탭 이름이자 검색 결과의 제목이고, `<meta name="description" content="…">` 는 페이지를 1~2문장으로 요약한 설명이에요. 페이지마다 다르게, "홈" 같은 막연한 말 대신 무엇이 있는 페이지인지 써요. 시맨틱 태그와 제목 단계도 검색 엔진이 구역을 알아보는 단서예요. 이 회차부터 평가 때마다 "기본 점검"(접근성·표준·SEO)을 함께 봐요.
 - 작은 따라 치기 (사이트와 상관없이 직접 쳐요)
   ```html
   <header class="site-header">
@@ -23,11 +24,11 @@
   <footer><small>연습용 페이지</small></footer>
   ```
 - 예상해 보기: `div` 를 모두 `header`·`main`·`footer` 로 바꾸면 화면 모양이 어떻게 될까요? — 답: 거의 그대로예요. 시맨틱 태그는 모양이 아니라 뜻을 더해서, 스크린 리더·검색 엔진이 구역을 알아봐요.
-- 공식 문서: [HTML 페이지 구조 (MDN)](https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) · [main 요소 (MDN)](https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/main)
+- 공식 문서: [HTML 페이지 구조 (MDN)](https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) · [main 요소 (MDN)](https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/main) · [title 요소 (MDN)](https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/title) · [메타 설명 (Lighthouse)](https://developer.chrome.com/docs/lighthouse/seo/meta-description?hl=ko)
 
 | 미션 | 할 일 (고른 사이트의 구역에 맞춰 바꿔요) | 완료 기준 |
 |---|---|---|
-| W04-1 기본 구조 | 고른 사이트의 첫 화면을 위에서 아래로 구역으로 나누어 `header` · `nav` · `main` · `footer` 뼈대를 만들어요. 구역 이름을 종이(또는 주석)에 먼저 적어요 | `header` · `nav` · `main` · `footer` 가 각각 있음 / `main` 은 페이지에 한 개 / 화면 구역 하나하나를 가리키며 어느 태그인지 말할 수 있음 |
+| W04-1 기본 구조 | 고른 사이트의 첫 화면을 위에서 아래로 구역으로 나누어 `header` · `nav` · `main` · `footer` 뼈대를 만들어요. 구역 이름을 종이(또는 주석)에 먼저 적어요 | `header` · `nav` · `main` · `footer` 가 각각 있음 / `main` 은 페이지에 한 개 / 화면 구역 하나하나를 가리키며 어느 태그인지 말할 수 있음 / `<title>` 이 내 페이지 내용을 말하고 `<meta name="description">` 에 1~2문장 요약이 있음 |
 | W04-2 개념 적용 | 고른 사이트의 목록 구역(여행지·상품·글 목록)을 `section` 으로 만들고, 카드마다 `article` 과 클래스 이름(예: `place-list` · `place-card` · `place-image` · `place-info` · `place-name`)을 달아요 | `section` 에 제목(`<h2>`)이 있음 / 카드 4개 이상이 같은 클래스 이름 규칙(`○○-list` 안에 `○○-card`) / 메뉴 링크 `href="#id"` 가 같은 페이지의 `id` 로 이동함 / 같은 `id` 를 두 번 쓰지 않음 |
 | W04-3 응용 | 접근성 다섯 가지(alt·링크 글자·제목 단계·랜드마크·lang)를 점검하고, W3C 검사기에 `index.html` 을 올려 오류를 줄 번호대로 고쳐요 | 검사기 오류(Error) 0개 / 모든 `<img>` 에 `alt`(장식은 `alt=""`) / `h1` → `h2` → `h3` 단계를 건너뛰지 않음 / 링크 글자만 읽어도 어디로 가는지 앎 |
 

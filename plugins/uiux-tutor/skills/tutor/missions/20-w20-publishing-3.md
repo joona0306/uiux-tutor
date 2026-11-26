@@ -23,7 +23,7 @@
 |---|---|---|
 | W20-1 기본 구조 | 내 페이지의 버튼·카드에 transition, 첫 화면 제목에 등장 `@keyframes` 를 넣고 움직임 줄이기 설정에서는 꺼요 | `transition` 이 평소 규칙에 있고 `:hover` 에는 바뀌는 값만 / `@keyframes` 이름과 `animation` 이름이 같음 / `@media (prefers-reduced-motion: reduce)` 가 파일 맨 아래에 있고 안에서 움직임을 끔 |
 | W20-2 개념 적용 | 키보드만으로 페이지를 쓸 수 있게 해요: 링크·버튼마다 `:focus-visible` 표시, 첫 Tab 에 "본문으로 건너뛰기" 링크 | 파일 어디에도 `outline: none` 이 없음 / `<a href="#main">` 와 `<main id="main">` 가 짝 / 평소엔 숨고 Tab 을 누르면 나타남(`position: absolute` + `:focus-visible`) / 헤더보다 위에 보임(`z-index`) |
-| W20-3 응용 | 품질 점검 A~E 를 직접 하고 `quality-check.md` 에 본 결과와 안 해 본 것을 나눠 적어요: 5폭 기기 모드, W3C 검사기, Lighthouse 접근성, 키보드·대비 확인 | `quality-check.md` 가 있고 항목마다 "본 결과" 또는 "안 해 봄" 중 하나가 적힘 / W3C 오류 0개 또는 남은 것의 줄 번호와 이유 / Lighthouse 점수와 실패 항목(없으면 없다고)을 적음 / "100점 ≠ 완벽한 접근성"을 이유와 함께 한 줄로 적음 |
+| W20-3 응용 | 품질 점검 A~E 를 직접 하고 `quality-check.md` 에 본 결과와 안 해 본 것을 나눠 적어요: 5폭 기기 모드, W3C 검사기, Lighthouse 접근성·SEO, 키보드·대비 확인 | `quality-check.md` 가 있고 항목마다 "본 결과" 또는 "안 해 봄" 중 하나가 적힘 / W3C 오류 0개 또는 남은 것의 줄 번호와 이유 / Lighthouse 접근성·SEO 점수와 실패 항목(없으면 없다고)을 적음 / SEO 실패 항목(예: 메타 설명 없음)은 고치고 다시 돌린 점수를 적음 / "100점 ≠ 완벽한 접근성"을 이유와 함께 한 줄로 적음 |
 
 ## 원본 닮음
 미션마다 완료 기준 끝에 "원본 닮음" 기준을 하나 더한다. 튜터가 고른 사이트를 같은 폭으로 열어 아래 항목의 **원본 값**(칸 수·순서·자리·DevTools로 읽은 값)을 넣어 구체적으로 만든다. 사진·글은 원본 것을 쓰지 않으므로 비교하지 않는다.
@@ -33,7 +33,7 @@
 
 ## 힌트 재료
 - 1단계: MDN `prefers-reduced-motion`·`:focus-visible` 문서(위 링크). 움직임 복습은 W16, 변수·대비는 W17
-- 2단계: 움직임 줄이기 블록은 파일 맨 끝에 둬요(앞에 있으면 뒤 규칙에 덮여요). Tab 확인은 새로고침 뒤 페이지를 클릭하지 않고 바로 Tab 을 눌러요. Lighthouse 는 시크릿 창에서 Accessibility 만 체크해 Mobile·Desktop 두 번 돌려요.
+- 2단계: 움직임 줄이기 블록은 파일 맨 끝에 둬요(앞에 있으면 뒤 규칙에 덮여요). Tab 확인은 새로고침 뒤 페이지를 클릭하지 않고 바로 Tab 을 눌러요. Lighthouse 는 시크릿 창에서 Accessibility·SEO 를 체크해 Mobile·Desktop 두 번 돌려요.
 - 3단계 예시(다른 이름·다른 값):
   ```css
   .btn:focus-visible { outline: 3px solid #111827; outline-offset: 2px; }
